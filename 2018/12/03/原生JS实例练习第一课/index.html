@@ -23,7 +23,7 @@
 <meta property="og:site_name" content="陈温宏前端小白的博客">
 <meta property="og:description" content="大三上学期，在陆陆续续自学了HTML+CSS之后初步了解了JS，但是自我感觉并不好，实际上本身就不自信。知识内容多，还不一定记得住理解不深刻，所以就在网上找了这个原生javascript实例练习资源进行练习，以下是学习过程中的总结和遇到的问题">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-12-09T11:33:29.555Z">
+<meta property="og:updated_time" content="2018-12-09T11:52:07.747Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="原生JS实例练习第一课">
 <meta name="twitter:description" content="大三上学期，在陆陆续续自学了HTML+CSS之后初步了解了JS，但是自我感觉并不好，实际上本身就不自信。知识内容多，还不一定记得住理解不深刻，所以就在网上找了这个原生javascript实例练习资源进行练习，以下是学习过程中的总结和遇到的问题">
@@ -309,7 +309,7 @@
           
         <p>大三上学期，在陆陆续续自学了HTML+CSS之后初步了解了JS，但是自我感觉并不好，实际上本身就不自信。知识内容多，还不一定记得住理解不深刻，所以就在网上找了这个原生javascript实例练习资源进行练习，以下是学习过程中的总结和遇到的问题<a id="more"></a></p>
 <h2 id="控制div的属性"><a href="#控制div的属性" class="headerlink" title="控制div的属性"></a>控制div的属性</h2><h3 id="My-JS代码"><a href="#My-JS代码" class="headerlink" title="My JS代码"></a>My JS代码</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">window.onload = <span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">	//把按钮，样式名，值都放入数组中，再进行一一对应赋值</span><br><span class="line">	var btn = document.querySelectorAll(<span class="string">'input'</span>);</span><br><span class="line">	var oAtt = [<span class="string">"width"</span>,<span class="string">"height"</span>,<span class="string">"background"</span>,<span class="string">"display"</span>,<span class="string">"display"</span>];</span><br><span class="line">	var value = [<span class="string">"200px"</span>,<span class="string">"200px"</span>,<span class="string">"red"</span>,<span class="string">"none"</span>,<span class="string">"block"</span>];</span><br><span class="line">	var oDiv = document.querySelector(<span class="string">'.div'</span>);</span><br><span class="line">			</span><br><span class="line">	<span class="keyword">for</span>(var i=0;i&lt;btn.length;i++)&#123;</span><br><span class="line">		btn[i].index = i;</span><br><span class="line">		btn[i].onclick = <span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">			/*这里设置了内联样式覆盖了外部样式,这里的style[]不是数组，</span><br><span class="line">				 是对象取值的一种方式，另一种使用点的方式*/</span><br><span class="line">			<span class="keyword">if</span>(this.index===btn.length-1)&#123;</span><br><span class="line">				oDiv.style.cssText =  <span class="string">""</span>;</span><br><span class="line">				  &#125;</span><br><span class="line">			oDiv.style[oAtt[this.index]] = value[this.index];</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>实现效果：<a href="https://1376854509.github.io/JS小白练习实例\第一课\控制div属性.html">请点这里</a></p>
+<p>实现效果：<a href="https://github.com/1376854509/1376854509.github.io/blob/learn/JS小白练习实例/第一课/控制div属性/控制div属性.html" target="_blank" rel="noopener">请点这里</a></p>
 <h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
 <h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
@@ -327,7 +327,7 @@
         <p><span>本文标题:</span><a href="/2018/12/03/原生JS实例练习第一课/">原生JS实例练习第一课</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">常应常静，常清静也</a></p>
         <p><span>发布时间:</span>2018-12-03, 10:26:59</p>
-        <p><span>最后更新:</span>2018-12-09, 19:33:29</p>
+        <p><span>最后更新:</span>2018-12-09, 19:52:07</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2018/12/03/原生JS实例练习第一课/" title="原生JS实例练习第一课">https://1376854509.github.io/2018/12/03/原生JS实例练习第一课/</a>
             <span class="copy-path" data-clipboard-text="原文: https://1376854509.github.io/2018/12/03/原生JS实例练习第一课/　　作者: 常应常静，常清静也" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
