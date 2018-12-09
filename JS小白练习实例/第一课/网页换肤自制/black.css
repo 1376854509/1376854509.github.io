@@ -1,0 +1,13 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	background: #838383;
+}
+.skin li.blackCurr {
+	background: #FFFFFF!important;
+}
+
+.nav {
+	background: #4B4646;
+}

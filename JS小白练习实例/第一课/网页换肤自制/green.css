@@ -1,0 +1,12 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	background: #6BAA78;
+}
+.nav {
+	background: #2DB134;
+}
+.skin li.greenCurr {
+	background: #FFFFFF!important;
+}
