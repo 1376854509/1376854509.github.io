@@ -15,18 +15,18 @@
 
 
 
-<meta name="description" content="大三上学期，在陆陆续续自学了HTML+CSS之后初步了解了JS，但是自我感觉并不好，实际上本身就不自信。知识内容多，还不一定记得住理解不深刻，所以就在网上找了这个原生javascript实例练习资源进行练习并进行扩展，以下是学习过程中的总结和遇到的问题">
+<meta name="description" content="大三上学期，在陆陆续续自学了HTML+CSS之后初步了解了JS，但是自我感觉并不好，实际上本身就不自信。知识内容多，还不一定记得住理解不深刻，所以就在网上找了这个原生javascript实例练习资源进行练习并进行扩展，以下是学习过程中的总结和遇到的问题。">
 <meta name="keywords" content="愚笨 中庸 缺乏自信">
 <meta property="og:type" content="article">
 <meta property="og:title" content="原生JS实例练习第一课">
 <meta property="og:url" content="https://1376854509.github.io/2018/12/03/原生JS实例练习第一课/index.html">
 <meta property="og:site_name" content="陈温宏前端小白的博客">
-<meta property="og:description" content="大三上学期，在陆陆续续自学了HTML+CSS之后初步了解了JS，但是自我感觉并不好，实际上本身就不自信。知识内容多，还不一定记得住理解不深刻，所以就在网上找了这个原生javascript实例练习资源进行练习并进行扩展，以下是学习过程中的总结和遇到的问题">
+<meta property="og:description" content="大三上学期，在陆陆续续自学了HTML+CSS之后初步了解了JS，但是自我感觉并不好，实际上本身就不自信。知识内容多，还不一定记得住理解不深刻，所以就在网上找了这个原生javascript实例练习资源进行练习并进行扩展，以下是学习过程中的总结和遇到的问题。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-12-10T09:31:25.361Z">
+<meta property="og:updated_time" content="2018-12-15T03:07:57.574Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="原生JS实例练习第一课">
-<meta name="twitter:description" content="大三上学期，在陆陆续续自学了HTML+CSS之后初步了解了JS，但是自我感觉并不好，实际上本身就不自信。知识内容多，还不一定记得住理解不深刻，所以就在网上找了这个原生javascript实例练习资源进行练习并进行扩展，以下是学习过程中的总结和遇到的问题">
+<meta name="twitter:description" content="大三上学期，在陆陆续续自学了HTML+CSS之后初步了解了JS，但是自我感觉并不好，实际上本身就不自信。知识内容多，还不一定记得住理解不深刻，所以就在网上找了这个原生javascript实例练习资源进行练习并进行扩展，以下是学习过程中的总结和遇到的问题。">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -307,11 +307,11 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>大三上学期，在陆陆续续自学了HTML+CSS之后初步了解了JS，但是自我感觉并不好，实际上本身就不自信。知识内容多，还不一定记得住理解不深刻，所以就在网上找了这个原生javascript实例练习资源进行练习并进行扩展，以下是学习过程中的总结和遇到的问题<a id="more"></a></p>
+        <p>大三上学期，在陆陆续续自学了HTML+CSS之后初步了解了JS，但是自我感觉并不好，实际上本身就不自信。知识内容多，还不一定记得住理解不深刻，所以就在网上找了这个原生javascript实例练习资源进行练习并进行扩展，以下是学习过程中的总结和遇到的问题。<a id="more"></a></p>
 <h2 id="控制div的属性"><a href="#控制div的属性" class="headerlink" title="控制div的属性"></a>控制div的属性</h2><h3 id="My-JS代码"><a href="#My-JS代码" class="headerlink" title="My JS代码"></a>My JS代码</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">window.onload = <span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">	//把按钮，样式名，值都放入数组中，再进行一一对应赋值</span><br><span class="line">	var btn = document.querySelectorAll(<span class="string">'input'</span>);</span><br><span class="line">	var oAtt = [<span class="string">"width"</span>,<span class="string">"height"</span>,<span class="string">"background"</span>,<span class="string">"display"</span>,<span class="string">"display"</span>];</span><br><span class="line">	var value = [<span class="string">"200px"</span>,<span class="string">"200px"</span>,<span class="string">"red"</span>,<span class="string">"none"</span>,<span class="string">"block"</span>];</span><br><span class="line">	var oDiv = document.querySelector(<span class="string">'.div'</span>);</span><br><span class="line">			</span><br><span class="line">	<span class="keyword">for</span>(var i=0;i&lt;btn.length;i++)&#123;</span><br><span class="line">		btn[i].index = i;</span><br><span class="line">		btn[i].onclick = <span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">			/*这里设置了内联样式覆盖了外部样式,这里的style[]不是数组，</span><br><span class="line">				 是对象取值的一种方式，另一种使用点的方式*/</span><br><span class="line">			<span class="keyword">if</span>(this.index===btn.length-1)&#123;</span><br><span class="line">				oDiv.style.cssText =  <span class="string">""</span>;</span><br><span class="line">				  &#125;</span><br><span class="line">			oDiv.style[oAtt[this.index]] = value[this.index];</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="原始代码"><a href="#原始代码" class="headerlink" title="原始代码"></a>原始代码</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">      var changeStyle = <span class="keyword">function</span> (elem, attr, value)</span><br><span class="line">&#123;</span><br><span class="line">	elem.style[attr] = value</span><br><span class="line">&#125;;</span><br><span class="line">window.onload = <span class="keyword">function</span> ()</span><br><span class="line">&#123;</span><br><span class="line">	var oBtn = document.getElementsByTagName(<span class="string">"input"</span>);</span><br><span class="line">	var oDiv = document.getElementById(<span class="string">"div1"</span>);</span><br><span class="line">	var oAtt = [<span class="string">"width"</span>,<span class="string">"height"</span>,<span class="string">"background"</span>,<span class="string">"display"</span>,<span class="string">"display"</span>];</span><br><span class="line">	var oVal = [<span class="string">"200px"</span>,<span class="string">"200px"</span>,<span class="string">"red"</span>,<span class="string">"none"</span>,<span class="string">"block"</span>];</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (var i = 0; i &lt; oBtn.length; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		var oBtn[i].index = i;</span><br><span class="line">		oBtn[i].onclick = <span class="keyword">function</span> ()</span><br><span class="line">		&#123;</span><br><span class="line">			this.index == oBtn.length - 1 &amp;&amp; (oDiv.style.cssText = <span class="string">""</span>);</span><br><span class="line">			changeStyle(oDiv, oAtt[this.index], oVal[this.index])</span><br><span class="line">		&#125;	</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="练习难点总结"><a href="#练习难点总结" class="headerlink" title="练习难点总结"></a>练习难点总结</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var changeStyle = <span class="keyword">function</span> (elem, attr, value)</span><br><span class="line">&#123;</span><br><span class="line">	elem.style[attr] = value</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<p>改变样式函数，（参数：被改变样式的元素，要改变的属性，属性值）。为什么这样写style[attr]，不这样写呢style.attr，因为函数传入参数是字符串，style[‘’]用字符串作为属性名也可以用数字。style.attr，attr是style对象中的一个属性<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var oBtn = document.getElementsByTagName(<span class="string">"input"</span>);</span><br><span class="line">var oDiv = document.getElementById(<span class="string">"div1"</span>);</span><br><span class="line">var oAtt = [<span class="string">"width"</span>,<span class="string">"height"</span>,<span class="string">"background"</span>,<span class="string">"display"</span>,<span class="string">"display"</span>];</span><br><span class="line">var oVal = [<span class="string">"200px"</span>,<span class="string">"200px"</span>,<span class="string">"red"</span>,<span class="string">"none"</span>,<span class="string">"block"</span>];</span><br></pre></td></tr></table></figure></p>
+<p>改变样式函数，（参数：被改变样式的元素，要改变的属性，属性值）。为什么这样写style[attr]，不这样写呢style.attr，因为函数传入参数是字符串，style[‘’]用字符串作为属性名也可以用数字。style.attr，attr是style对象中的一个属性。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var oBtn = document.getElementsByTagName(<span class="string">"input"</span>);</span><br><span class="line">var oDiv = document.getElementById(<span class="string">"div1"</span>);</span><br><span class="line">var oAtt = [<span class="string">"width"</span>,<span class="string">"height"</span>,<span class="string">"background"</span>,<span class="string">"display"</span>,<span class="string">"display"</span>];</span><br><span class="line">var oVal = [<span class="string">"200px"</span>,<span class="string">"200px"</span>,<span class="string">"red"</span>,<span class="string">"none"</span>,<span class="string">"block"</span>];</span><br></pre></td></tr></table></figure></p>
 <p>因为改变的样式数量少，可以放在数组里一一对应，然后通过循环遍历<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var oBtn[i].index = i;</span><br></pre></td></tr></table></figure></p>
 <p>把下标存在变量index中,因为考虑到i的作用域，脚本执行完，i最终会变为（oBtn.length-1）。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">this.index</span><br></pre></td></tr></table></figure></p>
 <p>this表示当前对象，this.index表示当前对象index属性值<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">this.index == oBtn.length - 1 &amp;&amp; (oDiv.style.cssText = <span class="string">""</span>);</span><br></pre></td></tr></table></figure></p>
@@ -325,11 +325,11 @@
 <h3 id="练习难点总结-1"><a href="#练习难点总结-1" class="headerlink" title="练习难点总结"></a>练习难点总结</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var oLi = document.querySelectorAll(<span class="string">".skin li"</span>);</span><br></pre></td></tr></table></figure>
 <p>这句其实没什么难的，但是很容易忘记querySelectorAll里的All。一旦忘了，发现错误就有点麻烦了。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var classArr = [<span class="string">"blueCurr"</span>,<span class="string">"greenCurr"</span>,<span class="string">"blackCurr"</span>];</span><br><span class="line">var css = [<span class="string">"blue.css"</span>,<span class="string">"green.css"</span>,<span class="string">"black.css"</span>];</span><br></pre></td></tr></table></figure>
-<p>这两句很好理解，就是把class类名和外部样式文件名存在数组里</p>
+<p>这两句很好理解，就是把class类名和外部样式文件名存在数组里。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var link = document.getElementsByTagName(<span class="string">"link"</span>)[0];</span><br></pre></td></tr></table></figure>
 <p>这句一开始没看仔细，不理解。后来发现自己是蠢到极点了，这就是获得标签名为link元素集合（数组）的第一个元素，其实只有一个link元素。关键是一定要记住getElementsByTagName得到的是一个集合（数组）</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(var p <span class="keyword">in</span> oLi)&#123;</span><br><span class="line">	oLi[p].className = <span class="string">""</span>; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>for…in语句以任意顺序遍历一个对象的可枚举属性。对于每个不同的属性，语句都会被执行。<br>这语句的目的是清除oLi所有li中用class定义的样式<br>for in 详细解释：<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in" target="_blank" rel="noopener">请点这里1</a> <a href="http://www.w3school.com.cn/js/js_loop_for_in.asp" target="_blank" rel="noopener">请点这里2</a></p>
+<p>for…in语句以任意顺序遍历一个对象的可枚举属性。对于每个不同的属性，语句都会被执行。<br>这语句的目的是清除oLi所有li中用class定义的样式。<br>for in 详细解释——&gt;<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in" target="_blank" rel="noopener">请点这里1</a> ——&gt;<a href="http://www.w3school.com.cn/js/js_loop_for_in.asp" target="_blank" rel="noopener">请点这里2</a></p>
 
       
     </div>
@@ -341,7 +341,7 @@
         <p><span>本文标题:</span><a href="/2018/12/03/原生JS实例练习第一课/">原生JS实例练习第一课</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">常应常静，常清静也</a></p>
         <p><span>发布时间:</span>2018-12-03, 10:26:59</p>
-        <p><span>最后更新:</span>2018-12-10, 17:31:25</p>
+        <p><span>最后更新:</span>2018-12-15, 11:07:57</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2018/12/03/原生JS实例练习第一课/" title="原生JS实例练习第一课">https://1376854509.github.io/2018/12/03/原生JS实例练习第一课/</a>
             <span class="copy-path" data-clipboard-text="原文: https://1376854509.github.io/2018/12/03/原生JS实例练习第一课/　　作者: 常应常静，常清静也" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -355,6 +355,12 @@
 
 
     <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2018/12/15/CSS问题汇总/">
+                    CSS问题汇总
+                </a>
+            </div>
         
         
             <div id="article-nav-older" class="article-nav-title">
@@ -427,7 +433,9 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/2018/12/15/CSS问题汇总/" title="上一篇: CSS问题汇总">
+                <i class="fa fa-angle-left"></i>
+            </a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
@@ -439,7 +447,7 @@
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/12/03/原生JS实例练习第一课/">原生JS实例练习第一课</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/02/hello-world/">Hello World</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/12/15/CSS问题汇总/">CSS问题汇总</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/03/原生JS实例练习第一课/">原生JS实例练习第一课</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/02/hello-world/">Hello World</a></li></ul>
 
 
 
