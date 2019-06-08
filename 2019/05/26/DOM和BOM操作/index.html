@@ -23,7 +23,7 @@
 <meta property="og:site_name" content="陈温宏前端小白的博客">
 <meta property="og:description" content="很难受,很迷茫,对未来的不确定性有很大的恐惧,怀疑自己选择学习前端是否正确,能不能行。但是很想证明自己,我是挺内向的,对自己很没有自信,可能是自己的经历和家庭导致的吧。今天去了余杭,买房贷款签字,其实心里挺不好受的,有家庭的原因，有自己忧虑的原因。晚上回寝室,看到B站上衡水中学学霸的演讲 “这世间,唯有青春和梦想不可辜负”,讲的很好，很优秀。——可能努力不一定会成功,但是如果到三四十岁还保持着对梦">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-06-06T15:38:04.029Z">
+<meta property="og:updated_time" content="2019-06-08T08:07:10.627Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="DOM和BOM操作">
 <meta name="twitter:description" content="很难受,很迷茫,对未来的不确定性有很大的恐惧,怀疑自己选择学习前端是否正确,能不能行。但是很想证明自己,我是挺内向的,对自己很没有自信,可能是自己的经历和家庭导致的吧。今天去了余杭,买房贷款签字,其实心里挺不好受的,有家庭的原因，有自己忧虑的原因。晚上回寝室,看到B站上衡水中学学霸的演讲 “这世间,唯有青春和梦想不可辜负”,讲的很好，很优秀。——可能努力不一定会成功,但是如果到三四十岁还保持着对梦">
@@ -324,6 +324,25 @@
 <h3 id="事件冒泡"><a href="#事件冒泡" class="headerlink" title="事件冒泡"></a>事件冒泡</h3><p>什么是冒泡：多个元素嵌套，有层次关系，这些元素被注册相同事件，如果里面元素事件被触发，那么外面元素的该事件自动触发</p>
 <p>阻止事件冒泡<br>window.event.cancelBubble = true; IE特有<br>e.stopPropagation();  谷歌和或火狐支持<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">/*兼容代码*/</span><br><span class="line">//为任意元素.绑定任意的事件,任意的元素,事件的类型,事件处理函数</span><br><span class="line"><span class="keyword">function</span> addEventListener(element,<span class="built_in">type</span>,fn)&#123;</span><br><span class="line">	//判断浏览器是否支持这个方法</span><br><span class="line">	<span class="keyword">if</span>(element.addEventListener)&#123;</span><br><span class="line">		element.addEventListener(<span class="built_in">type</span>,fn);</span><br><span class="line">	&#125;<span class="keyword">else</span> <span class="keyword">if</span>(element.attachEvent)&#123;</span><br><span class="line">		element.attachEvent(<span class="string">"on"</span>+<span class="built_in">type</span>,fn);</span><br><span class="line">	&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">		element[<span class="string">"on"</span>+<span class="built_in">type</span>] = fn;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <h3 id="事件阶段"><a href="#事件阶段" class="headerlink" title="事件阶段"></a>事件阶段</h3><p>详细解释——&gt;<a href="https://www.jianshu.com/p/1dd668ccc97a" target="_blank" rel="noopener">事件阶段详解</a></p>
+<h2 id="DOM-1"><a href="#DOM-1" class="headerlink" title="DOM"></a>DOM</h2><p>浏览器对象模型，操作浏览器</p>
+<p>浏览器顶级对象：window<br>页面顶级对象:document<br>页面所有内容都属于浏览器，页面中的内容都是window的，所以window可以省略</p>
+<p>window下的特殊属性：<br>window.name   获取/设置窗口名字     top关键字等于window</p>
+<p>扩展事件<br>window.onunload  页面关闭之后触发     window.onbeforeunload   页面关闭之前触发</p>
+<h3 id="Location对象"><a href="#Location对象" class="headerlink" title="Location对象"></a>Location对象</h3><p>Location 对象包含有关当前 URL 的信息。<br>详细解释——&gt;<a href="http://www.w3school.com.cn/jsref/dom_obj_location.asp" target="_blank" rel="noopener">Location对象</a></p>
+<h3 id="History对象"><a href="#History对象" class="headerlink" title="History对象"></a>History对象</h3><p>对象包含用户（在浏览器窗口中）访问过的 URL。<br>详细解释——&gt;<a href="http://www.w3school.com.cn/jsref/dom_obj_history.asp" target="_blank" rel="noopener">History对象</a></p>
+<h3 id="History对象-1"><a href="#History对象-1" class="headerlink" title="History对象"></a>History对象</h3><p>对象包含用户（在浏览器窗口中）访问过的 URL。<br>详细解释——&gt;<a href="http://www.w3school.com.cn/jsref/dom_obj_history.asp" target="_blank" rel="noopener">History对象</a></p>
+<p>###Navigator对象<br>Navigator 对象包含有关浏览器的信息<br>详细解释——&gt;<a href="http://www.w3school.com.cn/jsref/dom_obj_navigator.asp" target="_blank" rel="noopener">Navigator对象</a></p>
+<p>###定时器<br>注意事项：1.定时器清除  2.定时器当前对象指向（this）Window<br>详细解释——&gt;<a href="http://www.w3school.com.cn/jsref/dom_obj_navigator.asp" target="_blank" rel="noopener">Navigator对象</a></p>
+<p>###offset系列（宽高包括width,height,padding,border）(边距距离受父级元素margin影响)<br>offsetWidth 元素宽  offsetHeight  元素高   offsetLeft  距离视口左边距离  offsetTop  距离视口上面距离<br>详细解释——&gt;<a href="https://blog.csdn.net/sleepwalker_1992/article/details/80794514" target="_blank" rel="noopener">offset系列</a></p>
+<p>###Scroll系列（滚动区）<br>scrollWidth  scrollHeight （元素内部实际内容宽高，没内容就是元素宽高）</p>
+<p>scrollLeft   scrollTop  (向左向上滚动出去的距离，父级元素设置overflow:scroll）<br>补充：obj.onscroll  当鼠标滚动滚条是触发事件</p>
+<p>详细解释——&gt;<a href="https://blog.csdn.net/sleepwalker_1992/article/details/80833928" target="_blank" rel="noopener">Scroll系列</a></p>
+<p>###client系列（可视区）<br>clientWidth clientHeight(可视区域宽高，不包含边框）</p>
+<p>clientLeft   clientTop  (左边边框宽度）<br>补充：obj.onscroll  当鼠标滚动滚条是触发事件</p>
+<p>详细解释——&gt;<a href="https://blog.csdn.net/sleepwalker_1992/article/details/80833928" target="_blank" rel="noopener">client系列</a></p>
+<p>###获取元素CSS样式值问题<br>兼容性问题：<br>window.getComputedStyle(ele).attr  /返回一个包含所有CSS的对象集合，IE8不支持<br>ele.currentStyle  //返回CSS对象，Firefox不支持</p>
+<p>###阻止事件冒泡和阻止浏览器默认事件<br>阻止冒泡:<br>window.event.cancelBubble = true;  /   e.stopPropagation();</p>
+<p>阻止浏览器默认事件：<br>return false;   /  e.preventDefault();</p>
 
       
     </div>
@@ -335,7 +354,7 @@
         <p><span>本文标题:</span><a href="/2019/05/26/DOM和BOM操作/">DOM和BOM操作</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">常应常静，常清静也</a></p>
         <p><span>发布时间:</span>2019-05-26, 23:02:41</p>
-        <p><span>最后更新:</span>2019-06-06, 23:38:04</p>
+        <p><span>最后更新:</span>2019-06-08, 16:07:10</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2019/05/26/DOM和BOM操作/" title="DOM和BOM操作">https://1376854509.github.io/2019/05/26/DOM和BOM操作/</a>
             <span class="copy-path" data-clipboard-text="原文: https://1376854509.github.io/2019/05/26/DOM和BOM操作/　　作者: 常应常静，常清静也" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -371,7 +390,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#DOM"><span class="toc-number">1.</span> <span class="toc-text">DOM</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#设置标签中的文本内容"><span class="toc-number">1.1.</span> <span class="toc-text">设置标签中的文本内容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#设置标签中的文本内容-1"><span class="toc-number">1.2.</span> <span class="toc-text">设置标签中的文本内容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#节点及相关内容"><span class="toc-number">1.3.</span> <span class="toc-text">节点及相关内容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#创建元素的方式"><span class="toc-number">1.4.</span> <span class="toc-text">创建元素的方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#元素绑定事件"><span class="toc-number">1.5.</span> <span class="toc-text">元素绑定事件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#元素解绑事件"><span class="toc-number">1.6.</span> <span class="toc-text">元素解绑事件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#事件冒泡"><span class="toc-number">1.7.</span> <span class="toc-text">事件冒泡</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#事件阶段"><span class="toc-number">1.8.</span> <span class="toc-text">事件阶段</span></a></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#DOM"><span class="toc-number">1.</span> <span class="toc-text">DOM</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#设置标签中的文本内容"><span class="toc-number">1.1.</span> <span class="toc-text">设置标签中的文本内容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#设置标签中的文本内容-1"><span class="toc-number">1.2.</span> <span class="toc-text">设置标签中的文本内容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#节点及相关内容"><span class="toc-number">1.3.</span> <span class="toc-text">节点及相关内容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#创建元素的方式"><span class="toc-number">1.4.</span> <span class="toc-text">创建元素的方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#元素绑定事件"><span class="toc-number">1.5.</span> <span class="toc-text">元素绑定事件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#元素解绑事件"><span class="toc-number">1.6.</span> <span class="toc-text">元素解绑事件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#事件冒泡"><span class="toc-number">1.7.</span> <span class="toc-text">事件冒泡</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#事件阶段"><span class="toc-number">1.8.</span> <span class="toc-text">事件阶段</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DOM-1"><span class="toc-number">2.</span> <span class="toc-text">DOM</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Location对象"><span class="toc-number">2.1.</span> <span class="toc-text">Location对象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#History对象"><span class="toc-number">2.2.</span> <span class="toc-text">History对象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#History对象-1"><span class="toc-number">2.3.</span> <span class="toc-text">History对象</span></a></li></ol></li></ol>
         
     </div>
     <style>
