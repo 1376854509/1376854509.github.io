@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>网页换肤自作</title>
+	
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		body,html {
+			height: 100%;
+		}
+		body {
+			font-size: 12px;
+		}
+		.outer {
+			width: 500px;margin: 0 auto;overflow: hidden;zoom:1;
+		}
+		.skin,.nav {
+			list-style: none;
+		}
+		.skin {
+			margin: 10px 0;overflow: hidden;zoom:1;
+		}
+		.skin li {
+			width: 9px;height: 9px;float: left;margin-right: 10px;border-width: 5px;border-style: solid;cursor: pointer;
+		}
+		#blue {
+			border-color:blue;background: blue;
+		}
+		#green {
+			border-color:green;background: green;
+		}
+		#black {
+			border-color:black;background: black;
+		}
+		.nav {
+			border: 1px solid #fff;overflow: hidden;zoom:1;
+		}
+		.nav li {
+			width: 82px;float: left;line-height: 25px;text-align: center;border-right: 1px solid #fff;
+		}
+		.nav li .last {
+			border-right: 0;
+		}
+		.nav li a {
+			text-decoration: none;color: #000;
+		}
+	</style>
+	<link rel="stylesheet" href="green.css">
+	
+	<script>
+		//自己写的JS
+		window.onload = function() {	
+			//获取相关元素对象
+			var oLi = document.querySelectorAll(".skin li");
+			var classArr = ["blueCurr","greenCurr","blackCurr"];
+			var css = ["blue.css","green.css","black.css"];
+			//document.getElementsByTagName("link")注意这里得到是link数组,下标为零的第一个link才是想要的
+			var link = document.getElementsByTagName("link")[0];
+			//遍历换肤Li数组绑定事件对象
+			for(var i=0;i<oLi.length;i++){
+				oLi[i].index = i;
+				oLi[i].onclick = function(){
+					for(var p in oLi){
+						oLi[p].className = ""; 
+					}
+					oLi[this.index].className = classArr[this.index];
+					link.href= css[this.index];
+				}
+			}
+			
+		}
+		
+		//优质的JS
+		/*window.onload = function() {	
+			var oLi = document.querySelectorAll(".skin li");
+			var classArr = ["blueCurr","greenCurr","blackCurr"];
+			var css = ["blue.css","green.css","black.css"];
+			var link = document.getElementsByTagName("link")[0];
+			for(var i=0;i<oLi.length;i++){
+				oLi[i].index = i;
+				oLi[i].onclick = function(){
+					for(var p in oLi){
+						oLi[p].className = ""; 
+					}
+					oLi[this.index].className = classArr[this.index];
+					link.href= css[this.index];
+				}
+			}
+			
+		}*/
+		
+	
+		
+		
+		
+	
+		
+	
+		
+		
+		
+	</script>
+</head>
+
+<body>
+	<div class="outer">
+		<ul class="skin">
+			<li id="blue"></li>
+			<li id="green" class="greenCurr"></li>
+			<li id="black"></li>
+		</ul>
+		<ul class="nav">
+			<li><a href="">新闻</a></li>
+			<li><a href="">娱乐</a></li>
+			<li><a href="">体育</a></li>
+			<li><a href="">电影</a></li>
+			<li><a href="">音乐</a></li>
+			<li class="last"><a href="">旅游</a></li>
+		</ul>
+	</div>
+	
+</body>
+</html>
